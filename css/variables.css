@@ -1,0 +1,12 @@
+:root {
+    --font-family: "Mulish", sans-serif;
+    --light: #00c3ff;
+    --primary: #2071e7;
+    --dark: #2080b9;
+    --text: #333;
+    --background: #fafafa;
+    --hint: rgb(190, 124, 124);
+    --border: #ddd;
+    --bar-skill-dot: red;
+  }
+  

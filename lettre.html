@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0f9a3aa592.js" crossorigin="anonymous"></script>
+    <title>CV-Abdoulaye</title>
+    <title>LETTRE DE MOTIVATION</title>
+    <link rel="stylesheet" href="css/variables.css">
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: grey;
+}
+p{
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 1rem 0 1rem 0;
+}
+/*header*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5rem 2rem 0 2rem ;
+}
+@media (max-width: 480px) {
+  header {
+    padding: 5rem 2rem;
+  }
+}
+
+header .block h2{
+    letter-spacing: 0.4rem;
+    background: rgb(67, 156, 228);
+    color: white;
+    text-align: center;
+}
+header .block p{
+    letter-spacing: 0.1rem;
+    background: rgb(139, 212, 241);
+    color: white;
+    text-align: left;
+    height: 1.5rem;
+} 
+header .block h3{
+    letter-spacing: 0.1rem;
+    background:  rgb(67, 156, 228);
+    text-align: left;
+    color: white;
+}
+/*main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 4rem 2rem 0 2rem;
+}
+@media (max-width: 480px) {
+    main {
+      padding: 5rem;
+    }
+  }
+
+main .block h2{
+    background: rgb(67, 156, 228);
+    color: white;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+main .block h3{
+    background: rgb(139, 212, 241);
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+main .block p {
+    background: rgb(232, 241, 241);
+    padding: 0.5rem;
+    margin: O;
+    letter-spacing: 0.1rem;
+    width: 90%;
+}
+
+/*footer*/
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 5rem;
+    margin-top: 10rem;
+    background: var(--text);
+   width: 100%;
+   position: relative;
+  }
+
+footer h2 {
+  margin-bottom: 3rem;
+}
+footer form {
+  display: flex;
+  align-items: center;
+}
+footer form .prefix, footer form .postfix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+}
+footer form .prefix {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+footer form button {
+  background: var(--text);
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+footer form button:hover {
+  opacity: 0.8;
+}
+footer form button .postfix {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+footer form input {
+  outline: 0;
+  border: 0;
+  min-width: 400px;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+}
+@media (max-width: 480px) {
+  footer form input {
+    min-width: 280px;
+  }
+}
+footer form input::placeholder {
+  color: var(--text);
+}
+
+</style>
+<body>
+    <header>
+        <div class="block">
+            <h2>Toure Abdoulaye</h2>
+           <p> Adresse: 20 Rue du Clof Feuqières 75015 Paris</p>
+           <p>téléphone : 0644932627</p>
+           <p>Email: ablayetoure2014@gmail.com</p>
+        </div>
+        <div class="block">
+            <h3>Paris le 14/02/2022</h3>
+        </div>
+    </header>
+    <main>
+        <div class="block">
+            <h2>NOM DE LA SOCIETE</h2>
+            <h3>Adress de la socité </h3>
+        </div>
+        <div class="block">
+            <p>Madame, monsieur, </p>
+            <p>Diplômé d’un master 2 en littérature et civilisation anglaise et caribéenne, je suis depuis toujours passionné par le développement de projets et de systèmes d’information.
+            </p>
+            <p>J'ai créé et développé d’abord une entreprise de services multimédia avec deux salariés et plusieurs centaines de clients, puis je me suis formé en autodidacte (développement web(html5-CSS3-JAVASCRIPT).
+            </p>
+            <p>Avec l’objectif de compléter mon parcours et d’acquérir toutes les compétences nécessaires dans le domaine du développement informatique, j’ai été admis à l’ETNA (session de mars 2022) et je suis à la recherche d’une alternance afin de mettre rapidement mes compétences au service d’une entreprise tout en poursuivant ma formation et j’aimerais rejoindre votre équipe en tant que concepteur de projet SI.
+            </p>
+            <p>Je suis à votre disposition pour vous présenter plus en détails mon expérience, mes objectifs, et la valeur ajoutée que je peux vous apporter.
+             </p>
+             <p>Sincères salutations,</p>
+        </div>
+    </main>
+    <footer>
+        <h2 class="title-small">POUR VOUS RECONTACTER</h2>
+        <form name="contact" method="POST" data-netlify="true">
+           <i class="far fa-envelope-open prefix"></i>
+           <input type="text" name="email" placeholder="Votre email" /> 
+           <button type="submit">
+               <i class="fas fa-paper-plane postfix"></i>
+           </button>
+       </form>  
+   </footer>
+</body>
+</html>

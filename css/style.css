@@ -4,7 +4,7 @@
     box-sizing: border-box;
     
 }
-html body {
+ body {
   height: 100%;
 }
 body{
@@ -43,7 +43,7 @@ header{
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 480px) {
+@media  screen and(max-width: 480px) {
   header {
     padding: 5rem 2rem;
   }
@@ -56,6 +56,10 @@ header h1 {
     letter-spacing: 2rem;
 
 }
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 4rem;
+  }
 header p{
     letter-spacing: 0.5rem;
     font-size: 2rem;
@@ -191,7 +195,7 @@ aside .block .social-container:hover i {
       grid-area: main;
       padding: 5rem;
   }
-  @media (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     main {
       padding: 5rem;
     }
@@ -281,7 +285,11 @@ main .block-lettre p a{
    width: 100%;
    position: relative;
   }
-
+  @media screen and (max-width: 480px) {
+    footer {
+      padding: 5rem 1.5rem;
+    }
+  }
 footer h2 {
   margin-bottom: 3rem;
 }
@@ -319,11 +327,12 @@ footer form input {
   padding: 1rem 2rem;
   line-height: 2rem;
 }
-@media (max-width: 480px) {
+@media  screen and (max-width: 480px) {
   footer form input {
     min-width: 280px;
   }
 }
+
 footer form input::placeholder {
   color: var(--text);
 }

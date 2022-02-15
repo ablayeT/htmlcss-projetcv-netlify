@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: grey;
+}
+p{
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 1rem 0 1rem 0;
+}
+/*header*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5rem 2rem 0 2rem ;
+}
+@media (max-width: 480px) {
+  header {
+    padding: 5rem 2rem;
+  }
+}
+
+header .block h2{
+    letter-spacing: 0.4rem;
+    background: rgb(67, 156, 228);
+    color: white;
+    text-align: center;
+}
+header .block p{
+    letter-spacing: 0.1rem;
+    background: rgb(139, 212, 241);
+    color: white;
+    text-align: left;
+    height: 1.5rem;
+} 
+header .block h3{
+    letter-spacing: 0.1rem;
+    background:  rgb(67, 156, 228);
+    text-align: left;
+    color: white;
+}
+/*main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 4rem 2rem 0 2rem;
+}
+@media (max-width: 480px) {
+    main {
+      padding: 5rem;
+    }
+  }
+
+main .block h2{
+    background: rgb(67, 156, 228);
+    color: white;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+main .block h3{
+    background: rgb(139, 212, 241);
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+main .block p {
+    background: rgb(232, 241, 241);
+    padding: 0.5rem;
+    letter-spacing: 0.1rem;
+    width: 90%;
+}
+
+/*footer*/
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 5rem;
+    margin-top: 10rem;
+    background: var(--text);
+   width: 100%;
+   position: relative;
+  }
+
+footer h2 {
+  margin-bottom: 3rem;
+}
+footer form {
+  display: flex;
+  align-items: center;
+}
+footer form .prefix, footer form .postfix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+}
+footer form .prefix {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+footer form button {
+  background: var(--text);
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+footer form button:hover {
+  opacity: 0.8;
+}
+footer form button .postfix {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+footer form input {
+  outline: 0;
+  border: 0;
+  min-width: 400px;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+}
+@media (max-width: 480px) {
+  footer form input {
+    min-width: 280px;
+  }
+}
+footer form input::placeholder {
+  color: var(--text);
+}

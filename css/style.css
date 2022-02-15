@@ -4,13 +4,12 @@
     box-sizing: border-box;
     
 }
- body {
-  height: 100%;
-}
 body{
+  height: 100%;
     font-family: var(--font-family);
     color: var(--text);
     font-size: 1.6rem;
+    transition: ease-in-out;
 }
 p{
     margin: 0;
@@ -35,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 header{
     grid-area: header;
     background: linear-gradient(to right, var(--primary), var(--light));
-    padding: 1rem 0.5rem;
+    padding: 10rem 5rem;
     text-align: center;
     color: white;
     display: flex;
@@ -47,7 +46,7 @@ header{
 
 
 header h1 {
-    font-size: 3rem;
+    font-size: 6rem;
     line-height: 5rem;
     font-weight: 300;
     letter-spacing: 2rem;
@@ -64,17 +63,14 @@ header .description {
     padding: 1rem;
     font-size: 1rem;
 }
+/*picture*/
 
-
-header picture{
-    padding: 6rem;
-    background: var(--background);
-    border-right: 1px solid var(--border);
-}
 .picture img{
 
-    border-radius: 50%;
-    width: 16rem;
+    border: 50%;
+    width: 21.8rem;
+    height: 37rem;
+    
 }
 aside {
     grid-area: aside;

@@ -1,0 +1,47 @@
+@media (max-width: 480px){
+    .container{
+        grid: 
+        "picture" auto 
+        "header" auto 
+       "main" auto   
+        "aside" auto  
+        "footer" auto
+        /350px auto;
+    }
+}
+@media (max-width: 480px){
+    header{
+        padding: 5rem 4rem;
+        font-size: 2rem;
+    }
+}
+@media (max-width: 480px){
+    header h1{
+        font-size: 4rem;
+        
+    }
+}
+
+@media (max-width: 480px){
+    main{
+        padding: 1rem;
+        overflow:unset;
+        
+    }
+}
+
+
+@media (max-width: 480px) {
+    footer {
+      padding: 5rem 1.5rem;
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer form input {
+      min-width: 250px;
+    }
+  }
+
+  

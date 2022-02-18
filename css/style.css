@@ -4,12 +4,13 @@
     box-sizing: border-box;
     
 }
+html{
+  font-size: 80%;
+}
 body{
-  height: 100%;
     font-family: var(--font-family);
     color: var(--text);
-    font-size: 1.6rem;
-    transition: ease-in-out;
+    font-size: 1.5rem;
 }
 p{
     margin: 0;
@@ -19,74 +20,90 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container{
-    display: grid;
-    grid: 
-    "picture header" auto
-    "aside main"  1fr
-    "footer footer" auto
-    "section section" auto
-    /350px auto
-    ;   
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid:  
+  "header header" auto
+  "aside main" 3fr
+  " footer footer" auto
+   /350px auto
+  ; 
+  
 }
-
+@media  (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*header*/
 
 header{
     grid-area: header;
     background: linear-gradient(to right, var(--primary), var(--light));
-    padding: 10rem 5rem;
+    padding: 0;
     text-align: center;
     color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-header h1 {
-    font-size: 6rem;
-    line-height: 5rem;
-    font-weight: 300;
-    letter-spacing: 2rem;
-
-}
-
-header p{
-    letter-spacing: 0.5rem;
-    font-size: 2rem;
-
-}
-header .description {
-    margin: O;
-    padding: 1rem;
-    font-size: 1rem;
-}
-/*picture*/
-
-.picture img{
-
-    border: 50%;
-    width: 21.8rem;
-    height: 37rem;
+    flex-direction:row-reverse;
+    justify-content:space-around;
+    justify-self:auto;
     
 }
+header .titre{
+align-items:center; 
+padding-right: 6rem;
+
+}
+header .titre h1{
+  align-items:center;
+  letter-spacing: 1rem;
+  padding-top: 3rem;
+}
+header .picture img{
+  padding: 1rem 1rem;
+  width: 15rem;
+  border: 1px solid var(--light);
+  border-radius: 15rem;
+
+}
+span{
+ 
+    display: inline-block;
+    animation: bounce 2s;
+  
+}
+
+@media (max-width: 480px) {
+  header {
+      display: flex;
+      flex-direction: column;
+      
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  header  {
+    width: 50rem;
+    font-size: 4rem;
+  }
+}
+
+/*picture*/
+
+
 aside {
     grid-area: aside;
-    height: fit-content;
+    height: auto;
+    width: 21rem;
 }
-main{
-    grid-area: main;
+@media only screen and (max-width: 480px){
+  aside{
+    width: 50rem;
+  }
 }
-section {
-  grid-area: section;
-}
-footer{
-    grid-area: footer;
-    width: max-content;
-}
-/*aside*/
 
 aside{
     grid-area: aside;
@@ -94,7 +111,8 @@ aside{
     border-right: 1px solid var(--border);
     padding-right: 3rem;
     padding-left: 0.5rem;
-    overflow: scroll;
+    overflow:scroll;
+    
 }
 
 aside .block{
@@ -183,11 +201,14 @@ aside .block .social-container:hover i {
   
   main {
       grid-area: main;
-      padding: 5rem;
+      height: auto;
+      width: 50rem;
+      
+      
   }
-  @media (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     main {
-      padding: 5rem;
+      padding: 2rem ;
     }
   }
 
@@ -227,41 +248,89 @@ aside .block .social-container:hover i {
     list-style: circle;
     padding-left: 4rem;
   }
-  main .block-cp {
+  
+
+  main .competences-pf{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-around;
+    width: 2rem 1rem 2rem 1rem;
   }
-  main .block-cp p {
-    font-style: italic;
-    font-size:large;
-    color: rgba(40% 20% 20%)
-  }
-  main .block-cp h2{
-    text-decoration: underline;
-    text-align: justify;
-  }
-main .block-lettre{
-  text-decoration: underline;
-  text-align: center;
-}
-main .block-lettre p{
-  border: 2px solid rgb(9, 9, 235);
-  border-radius: 8rem;
-  border-style: dashed;
-  letter-spacing: 00.1rem;
-  background: rgb(0, 204, 255);
-
   
-}
-main .block-lettre p a{
- color: white;
-  cursor: pointer;
-  transition: all 0.2s;
-}
+  @media  (max-width: 480px) {
+    main .competences-pf {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5rem 2rem;
+      width: 40rem;
+      
+    }
+  }
+  
+
+  main .competences-pf .competences{
+    border: 1px solid var(--primary);
+    padding: 2rem;
+    border-width:0.2rem;
+    border-style: double;
+  }
+  main .competences-pf .point-forts{
+    border: 1px solid var(--primary);
+    padding: 2rem;
+    border-width:0.2rem;
+    border-style: double;
+  }
+
+  main .block-lettre{
+    padding-top: 8rem;
+    text-decoration: underline;
+    text-align: center;
+    
+  }
+  main .block-lettre button{
+    border: 0;
+    background: transparent;
+     position: relative;
+    overflow: hidden; 
+    padding: 20px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.4em;
+    box-shadow: 0px -0px 0px 0px rgba(143,64, 248, .5),
+     0px 0px 0px 0px rgba(39, 200, 255, .5);
+     transition: all .2s;
+
+
+  }
+  main .block-lettre button a{
+    color: var(--background);
+  }
+  main .block-lettre button::after{
+    content: "";
+    width: 400px;
+    height:400px;
+    background: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    z-index: -1;
+    transition: all .2s;
+
+  }
+  button:hover::after{
+    transform: rotate(150deg);
+  }
+  button:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px 10px 25px 0 rgba(143, 64, 248, .25),
+     -10px 10px 25px 0px rgba(39, 200, 255, .25);
+  }
+    
+  
 
 /*footer*/
-  
+
   footer {
     grid-area: footer;
     display: flex;
@@ -274,6 +343,12 @@ main .block-lettre p a{
     background: var(--text);
    width: 100%;
    position: relative;
+  }
+  @media only screen and (max-width: 480px) {
+    footer {
+      padding: 5rem 1.5rem;
+      width: 50rem;
+    }
   }
 
 footer h2 {
@@ -313,7 +388,11 @@ footer form input {
   padding: 1rem 2rem;
   line-height: 2rem;
 }
-
+@media  (max-width: 480px) {
+  footer form input {
+    min-width: 280px;
+  }
+}
 footer form input::placeholder {
   color: var(--text),
   

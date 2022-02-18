@@ -23,6 +23,10 @@ header{
 @media (max-width: 480px) {
   header {
     padding: 5rem 2rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+   
   }
 }
 
@@ -56,6 +60,7 @@ main{
 @media (max-width: 480px) {
     main {
       padding: 5rem;
+      width: 50rem;
     }
   }
 
@@ -93,7 +98,12 @@ footer {
    width: 100%;
    position: relative;
   }
-
+  @media (max-width: 480px) {
+    footer {
+      padding: 5rem 1.5rem;
+      width: 50rem;
+    }
+  }
 footer h2 {
   margin-bottom: 3rem;
 }
